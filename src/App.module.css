@@ -1,0 +1,79 @@
+header {
+    background: var(--gray-700);
+    width: 100%;
+    height: 12.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main {
+    max-width: 46rem;
+    margin: -1.675rem auto;
+
+    
+}
+
+main .form {
+    display: grid;
+    grid-template-columns: 1fr 6rem;
+    gap: 0.5rem;
+
+    height: 3.375rem;
+}
+
+main .form textarea {
+    resize: none;
+    padding: 1rem;
+
+    display: inline-block;
+
+    outline: 1px solid var(--gray-700);
+    border: 0;
+    border-radius: 8px;
+    height: 3.5rem;
+
+    background: var(--gray-500);
+    color: var(--gray-300);
+
+    font-size: 1rem;
+}
+
+main .form button {
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+
+    background: var(--blue-dark);
+    color: var(--gray-100);
+    line-height: 1.6;
+    font-weight: bold;
+    font-size: 0.875rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+
+    transition: background-color 0.1s;
+}
+
+main .form button:not(:disabled):hover{
+    cursor: pointer;
+    background: var(--blue);
+}
+
+.content {
+    margin: 4rem 0;
+} 
+
+.withTask {
+    width: 100%;   
+}
+
+@media (max-width: 800px) {
+    .main{
+        padding: 0 0.5rem;
+    }
+}

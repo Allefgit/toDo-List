@@ -1,0 +1,91 @@
+.taskDiv{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr max-content;
+
+    align-items: flex-start;
+    background: var(--gray-500);
+    padding: 1rem;
+
+    border-radius: 8px;
+}
+
+.taskDiv + .taskDiv {
+    margin-top: 0.875rem;
+}
+
+.taskDiv label {
+    display: flex;
+    flex-direction: row;
+
+    align-items: flex-start;
+}
+
+.taskDiv button {
+    border: 0;
+    border-radius: 2px;
+    background: transparent;
+    line-height: 0;
+
+    color: var(--gray-300);
+    transition: 0.1s;
+}
+
+.taskDiv button:hover {
+    cursor: pointer;
+    color: var(--danger);
+}
+
+.taskDiv label input[type='checkbox'] {
+    display: none;
+}
+
+.taskDiv label:hover {
+    cursor: pointer;
+}
+
+.checkbox {
+    border-radius: 100%;
+    width: 1.125rem;
+    height: 1.125rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.1s;
+}
+
+.checkbox-not-checked {
+    border: 2px solid var(--blue);
+}
+
+.checkbox-not-checked:hover{
+    background: var(--blue-dark);
+}
+
+.checkbox-checked {
+    border: 2px solid var(--purple-dark);
+    background: var(--purple-dark);
+}
+
+.checkbox-checked:hover{
+    background: var(--purple);
+}
+
+.paragraph {
+    font-size: 0.875rem;
+    line-height: 140%;
+  
+    color: var(--gray-100);
+    word-wrap: break-word;
+    transition: 0.1s;
+
+    max-width: 40rem;
+    margin: 0 0.5rem;
+  }
+
+.paragraph-checked{
+    text-decoration: line-through;
+    color: var(--gray-300);
+  }
