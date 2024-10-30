@@ -17,8 +17,15 @@ interface Task{
 }
 
 export function App() {
-  const [tasks, setTasks] = useState<Task[]>([])
+
+  const localStorageTasks = localStorage.getItem('tasks') !== null ? JSON.parse(localStorage.getItem('tasks')!) : []
+
+  const [tasks, setTasks] = useState<Task[]>(localStorageTasks)
   const [newTask, setNewTask] = useState('')
+
+  function updateLocalStorate(value: Task[]){
+    localStorage.setItem('tasks', JSON.stringify(value))
+  }
 
   const countTaskDone = tasks.reduce((prevValue, item) =>{
      if(item.isItDone) {
@@ -37,6 +44,7 @@ export function App() {
     })
 
     setTasks(tasksWithoutTheDeletedOne)
+    updateLocalStorate(tasksWithoutTheDeletedOne)
   }
 
   function handleToggleTask(id: string, value: boolean){
@@ -49,6 +57,7 @@ export function App() {
     })
 
     setTasks(updatedTask)
+    updateLocalStorate(updatedTask)
   }
 
   function handleAddTask(){
@@ -65,6 +74,8 @@ export function App() {
     }
 
     setTasks([...tasks, task])
+    updateLocalStorate([...tasks, task])
+
     setNewTask('')
   }
 
