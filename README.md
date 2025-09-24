@@ -1,50 +1,49 @@
-# React + TypeScript + Vite
+# 📝 ToDoList
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ToDoList** é uma aplicação web simples e rápida, desenvolvida para ajudar os usuários na **gerência de tarefas** do dia a dia.
 
-Currently, two official plugins are available:
+![todoList](https://github.com/user-attachments/assets/e389916c-729d-4f2a-be44-501c719b32ea)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Resumo
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+O objetivo do **ToDoList** é ser uma agenda prática em momentos de necessidade.  
+Apesar de ser minimalista, oferece as principais funcionalidades para organização:
 
-- Configure the top-level `parserOptions` property like this:
+- ➕ Criação de tarefas  
+- ✅ Definição de tarefas como concluídas  
+- 🗑️ Exclusão de tarefas  
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+---
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## ⚙️ Como funciona
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Para manter a simplicidade e rapidez:  
+- Não possui tela de login.  
+- As informações são gravadas **diretamente na memória cache do navegador**.  
+- Não há backend ou banco de dados.  
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Isso torna o acesso mais fácil e imediato, sem burocracia.
+
+---
+
+## 🛠️ Tecnologias utilizadas
+
+- [React](https://reactjs.org/)
+- TypeScript
+- Armazenamento local no navegador (cache/localStorage)  
+
+---
+
+## 📱 Design e Responsividade
+
+O design é **simples e objetivo**, mas conta com recursos **responsivos**, permitindo o uso fluido também em **aparelhos móveis**.
+
+---
+
+## 📌 Observação
+
+O foco do projeto é a **simplicidade**:  
+- Não há rotas, nem integrações complexas.  
+- Foi pensado como uma ferramenta ágil e prática para o dia a dia.
